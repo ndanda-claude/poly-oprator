@@ -178,19 +178,19 @@ void afficherMenu() {
 printf("\n");
 printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2  MENU PRINCIPALE \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 \n");
 printf("\n");
-printf("\xDB\xDB\xDB\xDB\xB2 1. Ajouter un terme au polynôme\n");
+printf("\xDB\xDB\xDB\xDB\xB2 1. Ajouter un terme au polynÃ´me\n");
 
-printf("\xDB\xDB\xDB\xDB\xB2 2. Afficher le polynôme\n");
+printf("\xDB\xDB\xDB\xDB\xB2 2. Afficher le polynÃ´me\n");
 
 printf("\xDB\xDB\xDB\xDB\xB2 3. Multiplier par une constante\n");
 
-printf("\xDB\xDB\xDB\xDB\xB2 4. Multiplier un polynôme par un monôme\n");
+printf("\xDB\xDB\xDB\xDB\xB2 4. Multiplier un polynÃ´me par un monÃ´me\n");
 
-printf("\xDB\xDB\xDB\xDB\xB2 5. Additionner deux polynômes\n");
+printf("\xDB\xDB\xDB\xDB\xB2 5. Additionner deux polynÃ´mes\n");
 
-printf("\xDB\xDB\xDB\xDB\xB2 6. soustraire deux polynômes\n");
+printf("\xDB\xDB\xDB\xDB\xB2 6. soustraire deux polynÃ´mes\n");
 
-printf("\xDB\xDB\xDB\xDB\xB2 7. Modifier le premier polynôme\n");
+printf("\xDB\xDB\xDB\xDB\xB2 7. Modifier le premier polynÃ´me\n");
 
 printf("\xDB\xDB\xDB\xDB\xB2 8. Quitter\n");
 
@@ -213,7 +213,7 @@ int main() {
 	printf("\t\t*                                               *\n");
 	printf("\t\t*           FOMO NDANDA CLAUDE                  *\n");
 	printf("\t\t*                                               *\n");
-	printf("\t\t*   github.com/ndanda-claude/poly-oprator       *\n");
+	printf("\t\t* https://github.com/ndanda-claude/poly-oprator *\n");
 	printf("\t\t*                                               *\n");
 	printf("\t\t*     CONTACT Me:+237 694699644,+237 681297063  *\n");
 	printf("\t\t*************************************************\n\n\n");
@@ -222,10 +222,10 @@ int main() {
     poly->debut = NULL;
 
     int degree;
-    printf("Entrer le degré du polynôme : ");
+    printf("Entrer le degrÃ© du polynÃ´me : ");
     scanf("%d", &degree);
 
-    printf("Entrer les coefficients du polynôme :\n");
+    printf("Entrer les coefficients du polynÃ´me :\n");
     for (int i = degree; i >= 0; i--) {
         float coefficient;
         printf("Coefficient de x^%d : ", i);
@@ -247,10 +247,10 @@ int main() {
         switch (choix) {
             case 1:
 
-                printf("Entrer le degré du nouveau polynôme : ");
+                printf("Entrer le degrÃ© du nouveau polynÃ´me : ");
                 scanf("%d", &degree);
 
-                printf("Entrer les coefficients du nouveau polynôme :\n");
+                printf("Entrer les coefficients du nouveau polynÃ´me :\n");
                 float coefficient;
                 scanf("%f", &coefficient);
                 ajouterTerme(poly, degree, coefficient);
@@ -267,26 +267,26 @@ int main() {
                 printf("Entrez la constante : ");
                 scanf("%f", &constante);
                 Polynome resultatMultiplication = multiplicationPolynomeConstante(poly, constante);
-                printf("Résultat de la multiplication par constante : ");
+                printf("RÃ©sultat de la multiplication par constante : ");
                 afficherPolynome(&resultatMultiplication);
                 break;
             case 4:
 
-                printf("Entrer le degré du monôme : ");
+                printf("Entrer le degrÃ© du monÃ´me : ");
                 scanf("%d", &monodegree);
-                printf("Entrer le coefficient du monôme : ");
+                printf("Entrer le coefficient du monÃ´me : ");
                 scanf("%f", &monocoef);
                 Polynome resultatMultiplicationMonome = multiplicationPolynomeMonome(poly, monodegree, monocoef);
-                printf("Résultat de la multiplication par monôme : ");
+                printf("RÃ©sultat de la multiplication par monÃ´me : ");
                 afficherPolynome(&resultatMultiplicationMonome);
                 break;
             case 5:
 
                 poly2.debut = NULL;
-                printf("Entrer le degré du deuxième polynôme : ");
+                printf("Entrer le degrÃ© du deuxiÃ¨me polynÃ´me : ");
                 scanf("%d", &degree);
 
-                printf("Entrer les coefficients du deuxième polynôme :\n");
+                printf("Entrer les coefficients du deuxiÃ¨me polynÃ´me :\n");
                 for (int i = degree; i >= 0; i--) {
                     float coefficient;
                     printf("Coefficient de x^%d : ", i);
@@ -296,17 +296,17 @@ int main() {
 
                 Polynome resultatAddition = addition2Polynome(poly, &poly2);
 
-                printf("Résultat de l'addition des polynômes : ");
+                printf("RÃ©sultat de l'addition des polynÃ´mes : ");
                 afficherPolynome(&resultatAddition);
                 break;
             case 6:
 
 
                 poly2.debut = NULL;
-                printf("Entrer le degré du deuxième polynôme : ");
+                printf("Entrer le degrÃ© du deuxiÃ¨me polynÃ´me : ");
                 scanf("%d", &degree);
 
-                printf("Entrer les coefficients du deuxième polynôme :\n");
+                printf("Entrer les coefficients du deuxiÃ¨me polynÃ´me :\n");
                 for (int i = degree; i >= 0; i--) {
                     float coefficient;
                     printf("Coefficient de x^%d : ", i);
@@ -316,13 +316,13 @@ int main() {
 
                 Polynome resultatSoustraction = subtraction2Polynome(poly, &poly2);
 
-                printf("Résultat de la soustraction des polynômes : ");
+                printf("RÃ©sultat de la soustraction des polynÃ´mes : ");
                 afficherPolynome(&resultatSoustraction);
                 break;
 
             case 7:
 
-                printf("Entrer le nouveau degré du polynôme : ");
+                printf("Entrer le nouveau degrÃ© du polynÃ´me : ");
                 scanf("%d", &degree);
 
 
@@ -337,7 +337,7 @@ int main() {
                 poly->debut = NULL;
 
 
-                printf("Entrer les nouveaux coefficients du polynôme :\n");
+                printf("Entrer les nouveaux coefficients du polynÃ´me :\n");
                 for (int i = degree; i >= 0; i--) {
                     float coefficient;
                     printf("Coefficient de x^%d : ", i);
@@ -351,7 +351,7 @@ int main() {
 
                 break;
             default:
-                printf("Choix invalide. Veuillez réessayer.\n");
+                printf("Choix invalide. Veuillez rÃ©essayer.\n");
         }
     } while (choix != 8);
 
